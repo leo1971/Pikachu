@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"fmt"
+
 	"github.com/spf13/cobra"
 )
 
@@ -13,7 +15,8 @@ var doneCmd = &cobra.Command{
 	Long: `pika
 done`,
 	Run: func(cmd *cobra.Command, args []string) {
-		println("pikachu, done.")
+		fmt.Printf("name:%v\nundone:%v\nindex:%v\nallFlag:%v\n", itemName, undoneFlag, index, allFlag)
+		index = 0
 	},
 }
 

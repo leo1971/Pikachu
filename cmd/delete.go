@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"fmt"
+
 	"github.com/spf13/cobra"
 )
 
@@ -10,7 +12,7 @@ var deleteCmd = &cobra.Command{
 	Long: `pika
 delete`,
 	Run: func(cmd *cobra.Command, args []string) {
-		println("pikachu, delete.")
+		fmt.Printf("index:%v\nall:%v\n", index, allFlag)
 	},
 }
 

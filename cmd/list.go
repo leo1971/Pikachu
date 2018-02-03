@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"fmt"
+
 	"github.com/spf13/cobra"
 )
 
@@ -12,7 +14,7 @@ var listCmd = &cobra.Command{
 	Long: `pika
 list`,
 	Run: func(cmd *cobra.Command, args []string) {
-		println("pikachu, list.")
+		fmt.Printf("sorttype:%v\n", sortType)
 	},
 }
 
