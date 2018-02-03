@@ -1,13 +1,13 @@
-#Pikachu
+# Pikachu
 A command-line tool for managing your todo list written in go.
 
-##TODO:
+## TODO:
 
-- [ ] basic framework
+- [x] basic framework
 - [ ] command line parser
 - [ ] database -> sql or json?
 - [ ] born
 - [ ] list
 - [ ] add
 - [ ] done/undone
-- [ ] delete 
+- [ ] delete
