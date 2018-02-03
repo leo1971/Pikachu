@@ -5,7 +5,6 @@ import (
 )
 
 func main() {
-	println("Hi, Pikachu!")
 	cmd.Execute()
 	return
 }
