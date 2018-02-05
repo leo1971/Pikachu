@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/leo1971/pikachu/pikachu"
 	"github.com/spf13/cobra"
 )
 
@@ -13,6 +14,7 @@ pika`,
 		println("Hi, pikachu")
 	},
 }
+var list pikachu.TodoList
 
 func init() {
 	rootCmd.AddCommand(bornCmd)
