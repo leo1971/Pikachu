@@ -6,10 +6,9 @@ import (
 	"io/ioutil"
 	"os"
 
-	"math/rand"
-
 	"strconv"
 
+	"github.com/Pallinder/go-randomdata"
 	"github.com/mitchellh/go-homedir"
 	"github.com/olekukonko/tablewriter"
 )
@@ -132,6 +131,6 @@ func genID() string {
 	//hd.MinLength = 4
 	//h, _ := hashids.NewWithData(hd)
 	//e, _ := h.Encode([]int{rand.Intn(10)})
-	randnum := rand.Intn(9999-1000) + 1000
+	randnum := randomdata.Number(1000, 9999)
 	return strconv.Itoa(randnum)
 }
