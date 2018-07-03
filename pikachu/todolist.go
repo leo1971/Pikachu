@@ -19,12 +19,12 @@ type TodoItem struct {
 }
 
 func TodoInit() error {
-	cacheDir, err := homedir.Expand("~/.neo/cache/")
+	cacheDir, err := homedir.Expand("~/.pika/cache/")
 	if err != nil {
 		return err
 	}
 
-	todoFile, err := homedir.Expand("~/.neo/cache/todolist.json")
+	todoFile, err := homedir.Expand("~/.pika/cache/todolist.json")
 	if err != nil {
 		return err
 	}
@@ -42,7 +42,7 @@ func TodoInit() error {
 }
 
 func getTodolist() []TodoItem {
-	todoFile, err := homedir.Expand("~/.neo/cache/todolist.json")
+	todoFile, err := homedir.Expand("~/.pika/cache/todolist.json")
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(-1)
@@ -66,7 +66,7 @@ func setTodolist(todolist []TodoItem) {
 		fmt.Println(err)
 		os.Exit(-1)
 	}
-	todoFile, err := homedir.Expand("~/.neo/cache/todolist.json")
+	todoFile, err := homedir.Expand("~/.pika/cache/todolist.json")
 	err = ioutil.WriteFile(todoFile, jsondata, 0666)
 	if err != nil {
 		fmt.Println(err)
