@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"github.com/leo1971/pikachu/pikachu"
 	"github.com/spf13/cobra"
 )
 
@@ -14,14 +13,13 @@ pika`,
 		println("Hi, pikachu")
 	},
 }
-var list pikachu.TodoList
 
 func init() {
-	rootCmd.AddCommand(bornCmd)
-	rootCmd.AddCommand(listCmd)
-	rootCmd.AddCommand(addCmd)
-	rootCmd.AddCommand(doneCmd)
-	rootCmd.AddCommand(deleteCmd)
+	rootCmd.AddCommand(todoCmd)
+
+	todoCmd.AddCommand(todoAddCmd)
+	todoCmd.AddCommand(todoDoneCmd)
+	todoCmd.AddCommand(todoInitCmd)
 }
 
 // Execute will be the only export interface for main.go
