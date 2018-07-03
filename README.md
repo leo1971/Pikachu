@@ -16,7 +16,7 @@ Usage:
 Available Commands:
   add         add todo item.
   done        done a todo item.
-  init         init todo cache file.
+  init        init todo cache file.
 
 Flags:
   -h, --help           help for todo
