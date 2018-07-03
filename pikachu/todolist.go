@@ -24,13 +24,13 @@ func TodoInit() error {
 		return err
 	}
 
+	if _, err := os.Stat(cacheDir); os.IsNotExist(err) {
+		os.MkdirAll(cacheDir, os.FileMode(0755))
+	}
+
 	todoFile, err := homedir.Expand("~/.pika/cache/todolist.json")
 	if err != nil {
 		return err
-	}
-
-	if _, err := os.Stat(cacheDir); os.IsNotExist(err) {
-		os.Mkdir(cacheDir, os.FileMode(0755))
 	}
 
 	_, err = os.Create(todoFile)
