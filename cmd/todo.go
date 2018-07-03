@@ -49,7 +49,7 @@ var todoDoneCmd = &cobra.Command{
 
 var todoInitCmd = &cobra.Command{
 	Use:   "init",
-	Short: " init todo cache file.",
+	Short: "init todo cache file.",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return pikachu.TodoInit()
 	},
