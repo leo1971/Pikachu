@@ -29,3 +29,7 @@ Use "pikachu todo [command] --help" for more information about a command.
 
 - [x] 完成基本的功能
 - [ ] 尝试接入web
+
+## License
+
+基于WTFPL协议开源。
