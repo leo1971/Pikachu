@@ -22,7 +22,7 @@ func init() {
 	todoCmd.AddCommand(todoInitCmd)
 }
 
-// Execute will be the only export interface for main.go
+// Execute will be the only export interface for cli.go
 func Execute() {
 	rootCmd.Execute()
 }

@@ -17,6 +17,9 @@ bin: fmtcheck
 dev: fmtcheck
 	@TF_DEV=1 sh -c "'$(CURDIR)/scripts/build.sh'"
 
+cli: cli_fmtcheck
+	@BIN='cli' sh -c "'$(CURDIR)/scripts/build.sh'"
+
 fmt:
 	gofmt -w $(GOFMT_FILES)
 
@@ -25,4 +28,7 @@ fmtcheck:
 
 vendor-status:
 	@govendor status
+
+cli_fmtcheck:
+	@APP_PATH='$(CURDIR)/cli' sh -c "'$(CURDIR)/scripts/gofmtcheck.sh'"
 

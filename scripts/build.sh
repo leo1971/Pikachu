@@ -50,13 +50,15 @@ fi
 
 # Build!
 echo "==> Building..."
+if [[ -n ${BIN} ]]; then
 gox \
     -os="${XC_OS}" \
     -arch="${XC_ARCH}" \
     -osarch="${XC_EXCLUDE_OSARCH}" \
     -ldflags "${LD_FLAGS}" \
-    -output "pkg/{{.OS}}_{{.Arch}}/pikachu" \
-    .
+    -output "output/{{.OS}}_{{.Arch}}/${BIN}" \
+    ./$BIN/
+fi
 
 # Move all the compiled things to the $GOPATH/bin
 GOPATH=${GOPATH:-$(go env GOPATH)}

@@ -3,7 +3,7 @@ package cmd
 import (
 	"errors"
 
-	"github.com/leo1971/pikachu/pikachu"
+	"github.com/leo1971/pikachu/cli/pikachu"
 	"github.com/spf13/cobra"
 )
 

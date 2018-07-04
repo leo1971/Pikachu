@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [[ -n ${APP_PATH} ]]; then
+    OLD_PATH=$PWD
+    cd $APP_PATH
+fi
+pwd
+
 # Check gofmt
 echo "==> Checking that code complies with gofmt requirements..."
 gofmt_files=$(gofmt -l `find . -name '*.go' | grep -v vendor`)
@@ -10,5 +16,8 @@ if [[ -n ${gofmt_files} ]]; then
     exit 1
 fi
 
-exit 0
+if [[ -n ${OLD_PATH} ]]; then
+    cd $OLD_PATH
+fi
 
+exit 0
