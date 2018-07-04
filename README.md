@@ -32,4 +32,4 @@ Use "pikachu todo [command] --help" for more information about a command.
 
 ## License
 
-基于WTFPL协议开源。
+基于[WTFPL](https://zh.wikipedia.org/wiki/WTFPL)协议开源。
