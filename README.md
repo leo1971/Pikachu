@@ -25,7 +25,7 @@ Flags:
 Use "pikachu todo [command] --help" for more information about a command.
 ```
 
-# TODO:
+# Todo
 
 - [x] 完成基本的功能
 - [ ] 尝试接入web
