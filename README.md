@@ -25,11 +25,11 @@ Flags:
 Use "pikachu todo [command] --help" for more information about a command.
 ```
 
-## TODO:
+# TODO:
 
 - [x] 完成基本的功能
 - [ ] 尝试接入web
 
-## License
+# License
 
 基于[WTFPL](https://zh.wikipedia.org/wiki/WTFPL)协议开源。
