@@ -1,0 +1,4 @@
+create_table("items", func(t) {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("thing", "string", {"not_null": false})
+})
