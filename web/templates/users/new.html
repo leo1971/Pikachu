@@ -1,0 +1,7 @@
+<h1>注册</h1>
+
+<%= form_for(user, {action: usersPath()}) { %>
+<%= f.InputTag("Name") %>
+<%= f.InputTag("Email") %>
+<button class="btn btn-success">注册</button>
+<% } %>
